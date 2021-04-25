@@ -1,0 +1,53 @@
+.switch{
+    width: 60px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+}
+.switch_input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.switch_radio{
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    position: absolute;
+    cursor: pointer;
+    background-color:#cccc ;
+    transition: 0.3s all;
+    border-radius: 34px;
+
+
+}
+
+.switch_radio::before{
+    content: '';
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    background-color: white;
+
+    transition: 0.3s all;
+}
+
+
+.switch_input:checked + .switch_radio{
+    background-color: #2196f3;
+}
+.switch_input:focus + .switch_radio:before{
+    background-color: #2196f3;
+}
+
+.switch_input:checked + .switch_radio::before{
+    transform: translateX(115%);
+    background-color: white;
+}
